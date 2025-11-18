@@ -3,11 +3,13 @@ package com.comphenix.protocol.utility;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.ByteBufProcessor;
+import io.netty.util.ByteProcessor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.nio.channels.FileChannel;
 import java.nio.channels.GatheringByteChannel;
 import java.nio.channels.ScatteringByteChannel;
 import java.nio.charset.Charset;
@@ -209,6 +211,34 @@ public class ZeroBuffer extends ByteBuf {
         return 0;
     }
 
+    public long getLongLE(int i) {
+        return 0;
+    }
+
+    public long getUnsignedIntLE(int i) {
+        return 0;
+    }
+
+    public int getMediumLE(int i) {
+        return 0;
+    }
+
+    public int getUnsignedMediumLE(int i) {
+        return 0;
+    }
+
+    public int getIntLE(int i) {
+        return 0;
+    }
+
+    public int getUnsignedShortLE(int i) {
+        return 0;
+    }
+
+    public short getShortLE(int i) {
+        return 0;
+    }
+
     @Override
     public char getChar(int i) {
         return 0;
@@ -264,6 +294,14 @@ public class ZeroBuffer extends ByteBuf {
         return 0;
     }
 
+    public int getBytes(int i, FileChannel fileChannel, long l, int i1) throws IOException {
+        return 0;
+    }
+
+    public CharSequence getCharSequence(int i, int i1, Charset charset) {
+        return "";
+    }
+
     @Override
     public ByteBuf setBoolean(int i, boolean b) {
         return null;
@@ -292,6 +330,30 @@ public class ZeroBuffer extends ByteBuf {
     @Override
     public ByteBuf setLong(int i, long l) {
         return null;
+    }
+
+    public ByteBuf setLongLE(int i, long l) {
+        return null;
+    }
+
+    public ByteBuf setIntLE(int i, int i1) {
+        return null;
+    }
+
+    public ByteBuf setMediumLE(int i, int i1) {
+        return null;
+    }
+
+    public ByteBuf setShortLE(int i, int i1) {
+        return null;
+    }
+
+    public int setBytes(int i, FileChannel fileChannel, long l, int i1) throws IOException {
+        return 0;
+    }
+
+    public int setCharSequence(int i, CharSequence charSequence, Charset charset) {
+        return 0;
     }
 
     @Override
@@ -404,6 +466,34 @@ public class ZeroBuffer extends ByteBuf {
         return 0;
     }
 
+    public long readLongLE() {
+        return 0;
+    }
+
+    public long readUnsignedIntLE() {
+        return 0;
+    }
+
+    public int readMediumLE() {
+        return 0;
+    }
+
+    public int readUnsignedMediumLE() {
+        return 0;
+    }
+
+    public int readIntLE() {
+        return 0;
+    }
+
+    public int readUnsignedShortLE() {
+        return 0;
+    }
+
+    public short readShortLE() {
+        return 0;
+    }
+
     @Override
     public char readChar() {
         return 0;
@@ -469,6 +559,18 @@ public class ZeroBuffer extends ByteBuf {
         return 0;
     }
 
+    public int readBytes(FileChannel fileChannel, long l, int i) throws IOException {
+        return 0;
+    }
+
+    public ByteBuf readRetainedSlice(int i) {
+        return null;
+    }
+
+    public CharSequence readCharSequence(int i, Charset charset) {
+        return "";
+    }
+
     @Override
     public ByteBuf skipBytes(int i) {
         return null;
@@ -517,6 +619,30 @@ public class ZeroBuffer extends ByteBuf {
     @Override
     public ByteBuf writeDouble(double v) {
         return null;
+    }
+
+    public ByteBuf writeShortLE(int i) {
+        return null;
+    }
+
+    public ByteBuf writeMediumLE(int i) {
+        return null;
+    }
+
+    public ByteBuf writeIntLE(int i) {
+        return null;
+    }
+
+    public ByteBuf writeLongLE(long l) {
+        return null;
+    }
+
+    public int writeBytes(FileChannel fileChannel, long l, int i) throws IOException {
+        return 0;
+    }
+
+    public int writeCharSequence(CharSequence charSequence, Charset charset) {
+        return 0;
     }
 
     @Override
@@ -584,22 +710,39 @@ public class ZeroBuffer extends ByteBuf {
         return 0;
     }
 
-    @Override
+    public int forEachByte(ByteProcessor byteProcessor) {
+        return 0;
+    }
+
+    public int forEachByte(int i, int i1, ByteProcessor byteProcessor) {
+        return 0;
+    }
+
+    public int forEachByteDesc(ByteProcessor byteProcessor) {
+        return 0;
+    }
+
+    public int forEachByteDesc(int i, int i1, ByteProcessor byteProcessor) {
+        return 0;
+    }
+
+    // Deprecated methods for backward compatibility
+    @Deprecated
     public int forEachByte(ByteBufProcessor byteBufProcessor) {
         return 0;
     }
 
-    @Override
+    @Deprecated
     public int forEachByte(int i, int i1, ByteBufProcessor byteBufProcessor) {
         return 0;
     }
 
-    @Override
+    @Deprecated
     public int forEachByteDesc(ByteBufProcessor byteBufProcessor) {
         return 0;
     }
 
-    @Override
+    @Deprecated
     public int forEachByteDesc(int i, int i1, ByteBufProcessor byteBufProcessor) {
         return 0;
     }
@@ -626,6 +769,34 @@ public class ZeroBuffer extends ByteBuf {
 
     @Override
     public ByteBuf duplicate() {
+        return null;
+    }
+
+    public ByteBuf retainedDuplicate() {
+        return null;
+    }
+
+    public ByteBuf retainedSlice() {
+        return null;
+    }
+
+    public ByteBuf retainedSlice(int i, int i1) {
+        return null;
+    }
+
+    public ByteBuf asReadOnly() {
+        return null;
+    }
+
+    public boolean isReadOnly() {
+        return false;
+    }
+
+    public ByteBuf touch() {
+        return null;
+    }
+
+    public ByteBuf touch(Object o) {
         return null;
     }
 

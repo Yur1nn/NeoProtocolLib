@@ -7,17 +7,11 @@
 .classpath
 .settings/
 bin/
-.idea/
-*.iml
-.ipr
-.iws
-
 *.pydevproject
 .metadata
 tmp/
 *.tmp
 *.bak
-*.swp
 *~.nib
 local.properties
 .loadpath
@@ -40,6 +34,13 @@ local.properties
 
 target/
 dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
 #################
 ## Visual Studio
@@ -134,9 +135,12 @@ UpgradeLog*.XML
 
 # Windows image file caches
 Thumbs.db
-
-# Folder config file
+ehthumbs.db
 Desktop.ini
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
 
 
 #############
@@ -173,11 +177,138 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 # Log4J files
 logs/
+*.log
+
+#################
+## Gradle
+#################
 
 .gradle/
 build/
-logs/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+.gradletasknamecache
+gradle-app.setting
+.gradle-toolchains/
+
+#################
+## Java
+#################
+
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+*.hprof
+*.jfr
 .java-version
+.jvmopts
+
+#################
+## IntelliJ IDEA
+#################
+
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/shelf
+.idea/httpRequests
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/dbNavigator.xml
+.idea/gradle.xml
+.idea/libraries
+.idea/caches
+.idea/modules.xml
+.idea/.name
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/codeStyles/
+.idea/inspectionProfiles/
+.idea/runConfigurations.xml
+.idea/encodings.xml
+
+#################
+## VSCode
+#################
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+#################
+## Test Coverage
+#################
+
+.nyc_output
+coverage/
+*.lcov
+test-results/
+junit.xml
+test-results.xml
+*.exec
+
+#################
+## Linux
+#################
+
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+#################
+## Other
+#################
+
+*.orig
+*.rej
+*.patch
+*.diff
+.cache/
+*.lock
+.env
+.env.local
+.env.*.local
